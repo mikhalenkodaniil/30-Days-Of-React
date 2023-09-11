@@ -1,0 +1,14 @@
+.cont {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.coun__cont {
+    text-align: left;
+}
+
+.lin__cont {
+    width: 500px;
+    height: 200px;
+}
