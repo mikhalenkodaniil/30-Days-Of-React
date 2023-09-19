@@ -1,0 +1,15 @@
+.info {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+}
+.info__h1 {
+    color: orange;
+    font-size: 75px;
+    margin: 0;
+}
+
+.info__p {
+    color: #555;
+    font-size: 30px;
+    font-weight: 600;
+}

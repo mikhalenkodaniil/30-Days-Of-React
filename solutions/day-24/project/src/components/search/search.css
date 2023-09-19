@@ -1,0 +1,17 @@
+.search__input {
+    background: #faf6f6;
+    border: 0.2rem solid #f8e7e7;
+    border-radius: 3rem;
+    color: orange;
+    font-size: 2rem;
+    height: 5rem;
+    margin: 3rem auto;
+    outline: none;
+    text-indent: 2rem;
+    width: 50%;
+}
+
+.search__input:hover {
+    border: 0.4rem solid #f8e7e7;
+    margin: 2.85rem auto;
+}
