@@ -15,7 +15,6 @@ export default function Main() {
             const response = await fetch(url);
             const Data = await response.json();
             setData(Data);
-            console.log(Data);
         } catch (err) {
             console.log(err)
         }

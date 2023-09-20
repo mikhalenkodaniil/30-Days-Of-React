@@ -4,10 +4,10 @@ export default function PopulationStats({ cdata }) {
     const names = [];
     const percent = [];
     const population = [];
+    let k = 10;
     if (cdata[0]) {
       const data = [...cdata];
         data.sort((a, b) => b.population - a.population);
-        let k = 10;
         if (data.length < 10) k = data.length;
         for (let i = 0; i < k; i++) {
             names.push(<div className="stats__graph__text" key={`name ${i}`}>{data[i].name}</div>)
@@ -24,7 +24,7 @@ export default function PopulationStats({ cdata }) {
     }
   return (
     <>
-      <p className="stats__p">10 Most populated countries in the world</p>
+      <p className="stats__p">{k} Most populated countries in the world</p>
       <div className="stats__graph">
         <div className="stats__graph__block">
           <div className="stats__graph__shadow">

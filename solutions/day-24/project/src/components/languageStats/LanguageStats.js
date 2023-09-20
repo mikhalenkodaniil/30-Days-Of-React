@@ -3,6 +3,7 @@ export default function LanguageStats({ data }) {
     let name = [];
     let percent = [];
     let count = [];
+    let k = 10;
     if (data[0]) {
         let languages = {};
         data.forEach(el => {
@@ -20,7 +21,6 @@ export default function LanguageStats({ data }) {
         }
         arr.sort((a, b) => b[1] - a[1]);
         const MAX = arr[0][1];
-        let k = 10;
         if (arr.length < k) k = arr.length;
         if (arr[0] === undefined) k = 0;
         for (let i = 0; i < k; i++) {
@@ -31,7 +31,7 @@ export default function LanguageStats({ data }) {
     }
   return (
     <>
-      <p className="stats__p">10 Most spoken languages in the world</p>
+      <p className="stats__p">{k} Most spoken languages in the world</p>
       <div className="stats__graph">
         <div className="stats__graph__block">
           <div className="stats__graph__shadow">
