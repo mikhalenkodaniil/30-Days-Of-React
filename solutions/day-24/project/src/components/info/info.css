@@ -13,3 +13,9 @@
     font-size: 30px;
     font-weight: 600;
 }
+
+.info__length {
+    color: orange;
+    font-size: 30px;
+    font-style: italic;
+}

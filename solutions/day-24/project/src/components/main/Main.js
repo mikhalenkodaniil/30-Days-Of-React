@@ -1,7 +1,6 @@
 import Card from '../card/Card';
 import Info from '../info/Info';
-// import Search from '../search/Search';
-// import { useState } from 'react';
+import Stats from '../stats/Stats';
 import './main.css'
 import React, { useState, useEffect } from 'react'
 
@@ -48,15 +47,16 @@ export default function Main() {
             return name.includes(val)
         }
     }
-    
+
     return (
         <main>
-            <Info data={data} />
+            <Info data={data.length} length={cData.length}/>
             <section className='search'>
                 <input onChange={inputChange} value={input} className='search__input' placeholder='Search countries by name, city and language'/>
             </section>
             <a href='#stats' className='stats__a'>Stats</a>
             <Card data={cData} />
+            <Stats data={cData}/>
         </main>
     );
 }
