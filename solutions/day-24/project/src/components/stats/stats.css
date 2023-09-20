@@ -7,7 +7,7 @@
 
 .stats__btn {
     background-color: orange;
-    border: 3px solid orange;
+    border: 0px solid orange;
     color:blanchedalmond;
     border-radius: 0.4rem;
     margin: 10px 10px 10px 10px;
@@ -19,6 +19,13 @@
 
 .stats__btn:hover {
     transition-duration: 0.5s;
+    background-color: rgb(230, 150, 0);
+    color: #fff;
+}
+
+.stats__btn:active {
+    transition-duration: 0.05s;
     background-color: #fff;
     color: orange;
+    border: 2px solid orange;
 }
