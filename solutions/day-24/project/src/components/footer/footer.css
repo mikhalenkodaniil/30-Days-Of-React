@@ -1,0 +1,31 @@
+.footer {
+    height: 340px;
+    background-color: #f0f0f0;
+}
+
+.top__a {
+    text-decoration: none;
+    color: orange;
+    font-size: 30px;
+}
+
+.copyright {
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: #333;
+}
+
+.footer__join {
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: #333;
+}
+
+.footer__a {
+    text-decoration: none;
+    color: #794aa2;
+}
+
+.footer_dev {
+    font-size: 18px;
+}
