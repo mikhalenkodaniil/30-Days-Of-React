@@ -1,0 +1,33 @@
+.nav__item {
+    text-decoration: none;
+    list-style-type: none;
+    width: 100px;
+}
+
+.nav__item__a {
+    text-decoration: none;
+    color: #525c65;
+    font-size: 20px;
+}
+
+.nav__item__a:hover {
+    transition-duration: 0.5s;
+    color: black;
+}
+
+.logo__a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.nav__ul {
+    display: flex;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
