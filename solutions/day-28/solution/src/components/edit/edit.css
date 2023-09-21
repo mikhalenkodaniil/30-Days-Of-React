@@ -1,0 +1,56 @@
+.edit {
+    width: 580px;
+    height: 230px;
+    border: 1px solid #e6ecf0;
+}
+
+.edit__input {
+    margin-top: 10px;
+}
+
+.edit__btns {
+    margin-top: 30px;
+}
+
+.edit__btn {
+    width: 90px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.edit__btn__save {
+    background-color: #109de4;
+}
+
+.edit__btn__save:hover {
+    transition: 0.3s;
+    background-color: #00aaff;
+}
+
+.edit__btn__save:active {
+    transition: 0.1s;
+    background-color: #fff;
+    color: #00aaff;
+    border: 2px solid #00aaff;
+}
+
+.edit__btn__cancel {
+    background-color: gray;
+}
+
+.edit__btn__cancel:hover {
+    transition: 0.3s;
+    background-color: rgb(92, 92, 92);
+}
+
+.edit__btn__cancel:active {
+    transition: 0.1s;
+    background-color: #fff;
+    color: gray;
+    border: 2px solid gray;
+}

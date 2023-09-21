@@ -1,3 +1,4 @@
+import Edit from "../edit/Edit";
 import "./post.css";
 import {
   AiOutlineUser,
@@ -8,11 +9,14 @@ import {
   AiOutlineRetweet,
 } from "react-icons/ai";
 
-export default function Post({ user, id, deletePost }) {
+export default function Post({ user, id, deletePost, editPost, save, cancel }) {
   const nowDate = new Date().toString().split(" ");
   const date = `${nowDate[1]} ${nowDate[2]}, ${nowDate[3]} ${
     nowDate[4].split(":")[0]
   }:${nowDate[4].split(":")[0]}`;
+  if (user.edit === true) {
+    return (<Edit post={user.post} save={save} cancel={cancel} id={id} />);
+  }
   return (
     <section className="post">
       <div className="post__row1">
@@ -26,7 +30,9 @@ export default function Post({ user, id, deletePost }) {
       <div className="post__row2">
         <div className="post__deleteedit">
           <AiOutlineEdit
+            id={id}
             className="btn__edit"
+            onClick={editPost}
             style={{ height: "30px", width: "30px" }}
           />
           <AiOutlineDelete

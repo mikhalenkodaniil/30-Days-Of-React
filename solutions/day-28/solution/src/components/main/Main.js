@@ -32,7 +32,7 @@ export default function Main() {
   ];
   const [users, setUsers] = useState(info);
   const tweets = [...users].map((el, id) => {
-    return <Post user={el} id={id} deletePost={deletePost} key={`post ${id}`} />
+    return <Post user={el} id={id} deletePost={deletePost} editPost={editPost} save={save} cancel={cancel} key={`post ${id}`} />
   });
   const ref = useRef(null);
   const [count, setCount] = useState(250);
@@ -59,16 +59,37 @@ export default function Main() {
       newPost.post = ref.current.value;
       newArr.push(newPost);
       setUsers(newArr);
+      ref.current.value = null;
     }
   }
 
   function deletePost(e) {
-    console.log();
     let newArr = [...users];
     let id = e.target.id;
     newArr.splice(id, 1);
     setUsers(newArr);
   }
+
+  function editPost(e) {
+    let newArr = [...users];
+    let id = e.target.id;
+    if (id) {
+        newArr[id].edit = true;
+        setUsers(newArr);
+    }
+  }
+  function save(post, id) {
+    let newArr = [...users];
+    newArr[id].edit = false;
+    newArr[id].post = post;
+    setUsers(newArr);
+  }
+  function cancel(id) {
+    let newArr = [...users];
+    newArr[id].edit = false;
+    setUsers(newArr);
+  }
+
   return (
     <main className="main">
       <section className="input">
